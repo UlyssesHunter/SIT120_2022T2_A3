@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet"href="./Homepage.css"/>
+        <title>Plan</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <!-- Main wrap -->
+        <main class="wrapper">
+            <!-- Navigation bar -->
+                <div class="WebAddress">
+                    <a href="Homepage.html">StudeyPlan.com</a>
+                </div>
+                <div id="container">
+                    <nav>
+                    <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Profile.html">Profile</a></li>
+                    <li class= "now"><a href="Plan.html">Plan</a></li>
+                    <li><a>Search</a></li>
+                    </ul>
+                    </nav>
+    
+                <div id="rightcol">
+                <div id="app">
+                    <!-- Header -->
+                    <header class="title">
+                        <div id="app">
+                            <h1><planname></planname></h1>
+                        </div>
+                    </header>
+                    <input type="checkbox" id ="Monday" value = "Monday" v-model="checkedDates"/>
+                    <label for="Monday">Monday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <div></div>
+                    <input type="checkbox" id ="Tuesday" value = "Tuesday" v-model="checkedDates"/>
+                    <label for="Monday">Tuesday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <div></div>
+                    <input type="checkbox" id ="Wednesday" value = "Wednesday" v-model="checkedDates"/>
+                    <label for="Monday">Wednesday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <div></div>
+                    <input type="checkbox" id ="Thursday" value = "Thursday" v-model="checkedDates"/>
+                    <label for="Monday">Thursday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <div></div>
+                    <input type="checkbox" id ="Friday" value = "Friday" v-model="checkedDates"/>
+                    <label for="Monday">Friday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <div></div>
+                    <input type="checkbox" id ="Saturday" value = "Saturday" v-model="checkedDates"/>
+                    <label for="Monday">Saturday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <div></div>
+                    <input type="checkbox" id ="Sunday" value = "Sunday" v-model="checkedDates"/>
+                    <label for="Monday">Sunday</label>
+                    <select v-model="selected">
+                        <option value="" disabled>Hours spent on study</option>
+                        <option v-for="n in 24">{{n}}</option>
+                    </select>
+                    <br />
+                    <span>Completed date: {{checkedDates}}</span>
+                    <div></div>
+                    <button class="button" onclick="">{{ now }}</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footerp -->
+    <footer>
+        <p>Please <a href="mailto: fake.help@StudeyPlan.com">Contact Service</a> if you have any inquiry.</p>
+        <small><i> Copyright &copy; 2022 Jinwen Liu. All right reserved. </i> </small>
+    </footer>
+    </body>
+</html>
+
+<script src="./components.js"></script>
