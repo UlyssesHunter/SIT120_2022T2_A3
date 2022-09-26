@@ -1,7 +1,13 @@
-#container {margin-left: 1vw;}
+#container {float:top;
+
+}
 
     .WebAddress{
-        float: top;
+    position: absolute;   
+    top: 2px;   
+    left: 10px;  
+    width: 100px;   
+    height: 50px;
     }
       
       .WebAddress a{
@@ -12,26 +18,27 @@
     }
     
     nav {background-color:navy;
+        margin-top: 10px;
         float:left;
+        height: 220px;
         width: 150px;}
     ul {list-style-type: none;
         font-size: 1.25em;
         font-weight: bold;}
-    a {text-decoration: none;
-        }
-    .now{
-        color:cornflowerblue;}
+    a {text-decoration: none;}
+    .now{color:cornflowerblue;}
         
 li{float: left;}
 li a{
 display: block;
 color: rgb(255, 253, 253);
 font-weight: bolder;
+width: 70px;
 text-decoration: none;
-padding:8px 16px;
+padding:10px 16px;
 }
 li :hover{color: rgb(100, 200, 60);}
-.now{background-color: rgb(100, 200, 60);}
+.now{background-color: rgb(100, 200, 60);background-size:cover; }
 .now :hover{color: rgb(208, 208, 208);}
 
 #rightcol 

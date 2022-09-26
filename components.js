@@ -12,7 +12,6 @@ var profileName={
 var app =new Vue({
     el:'#app',
     data:{
-        message:'hello',
         checked:false,
         checkedDates:[],
         planName:'My Plan',
@@ -27,18 +26,4 @@ var app =new Vue({
           return this.checkedDates.length>6? 'Finished check':'Unfinished'
         }
     }
-});
-
-var client= new Vue({
-    el: '#client',
-    data:{
-        client:{
-            firstName:'John',
-            lastName:'Doe',
-        },
-        
-    },
-    components:{
-            
-    },
 });

@@ -67,17 +67,17 @@
                 var Password = document.getElementById('Password').value;
                 var RepeatPassword = document.getElementById('RepeatPassword').value;
                 if(!Username || !Password || !RepeatPassword){
-                    alert("Please complete the form");
+                    alert("Please input the content");
                     return;
                 }
                 if(Password !== RepeatPassword){
-                    alert("Entered passwords different");
+                    alert("The two passwords are inconsistent");
                     return;
                 }
                 window.localStorage.setItem("Username", Username);
                 window.localStorage.setItem("Password", Password);
-                alert("Succeed! please login")
-                window.location.href = "Login.html";   
+                alert("register success! please login")
+                window.location.href = "login.html";   
             }
         }
     }

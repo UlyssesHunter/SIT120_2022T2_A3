@@ -27,12 +27,11 @@
                     </nav>
     
                 <div id="rightcol">
+
                 <div id="app">
                     <!-- Header -->
                     <header class="title">
-                        <div id="app">
-                            <h1><planname></planname></h1>
-                        </div>
+                        <h1><planname></planname></h1>
                     </header>
                     <input type="checkbox" id ="Monday" value = "Monday" v-model="checkedDates"/>
                     <label for="Monday">Monday</label>
@@ -86,6 +85,7 @@
                     <span>Completed date: {{checkedDates}}</span>
                     <div></div>
                     <button class="button" onclick="">{{ now }}</button>
+                    
                 </div>
             </div>
         </div>
@@ -95,6 +95,9 @@
         <p>Please <a href="mailto: fake.help@StudeyPlan.com">Contact Service</a> if you have any inquiry.</p>
         <small><i> Copyright &copy; 2022 Jinwen Liu. All right reserved. </i> </small>
     </footer>
+    <div id="app">
+        <component1 :person="person"></component1>
+    </div>
     </body>
 </html>
 
