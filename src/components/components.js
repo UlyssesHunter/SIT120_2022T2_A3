@@ -25,5 +25,6 @@ var app =new Vue({
         now() {
           return this.checkedDates.length>6? 'Finished check':'Unfinished'
         }
-    }
+    },
+
 });
