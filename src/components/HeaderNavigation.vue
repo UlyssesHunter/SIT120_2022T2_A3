@@ -21,14 +21,7 @@
         return {
           items: [
             { txt: "Homepage", url: "/" },
-            {
-              txt: "Profile",
-              url: "/about",
-              children: [
-                { txt: "Login", url: "/login" },
-                { txt: "Register", url: "/" },
-              ],
-            },
+            {txt: "Login", url: "/login"},
             {
               txt: "Plan",
               url: "/plan",

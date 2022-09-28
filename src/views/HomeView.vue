@@ -30,7 +30,7 @@ export default defineComponent({
 </script>
 
 <style>
-.nav {
+.nav { 
   position: absolute;
   top:0%;
   width: 100%;

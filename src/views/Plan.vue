@@ -62,9 +62,12 @@
                 <p>Memo is: {{ message }}</p>
                 <input v-model="message" placeholder="edit me" />
                 </div>
-                <button class="button" v-on:click="now()">Submit</button>
-                <p>Check: {{ Finished }}</p>
+                <button v-on:click="now()"><FancyButton>Submit</FancyButton></button>
+                <p>Check: {{ Finished }}</p>  
+                <p>Capitalizes helper</p>
+                <CapitalizesHelper v-model.capitalize="myText" />
       </body>
+      
       <footer class="addoninfo">
           <p>Please <a href="mailto: fake.help@StudeyPlan.com">Contact Service</a> if you have any inquiry.</p>
           <small><i> Copyright &copy; 2022 Jinwen Liu. All right reserved. </i> </small>
@@ -73,8 +76,12 @@
   </template>
 
   <script>
+    import CapitalizesHelper from '../components/Capitalizes.vue'
+    import FancyButton from '../components/FancyBotton.vue'
+
     export default {
       name: 'app',
+      components: { CapitalizesHelper,FancyButton },
       data() {
           return {
                 checked:false,
@@ -83,6 +90,7 @@
                 profileName:'My Name',
                 Finished:'Not finished',
                 message:'',
+                myText: ''
           }
       },
       methods: {
@@ -91,7 +99,8 @@
                 this.Finished = "Finished check";
             }
         }
-      }
+      },
+      
     }
 
   </script>

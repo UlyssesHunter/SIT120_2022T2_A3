@@ -1,17 +1,28 @@
 <template>
-<h1 class="title">Login</h1>
+<h1 class="title">
+  <router-link v-if="authenticated" to="/secure">Secure</router-link>
+  <router-link v-if="authenticated" to="/login" v-on:click="logout()" replace>Logout</router-link>
+  <router-link v-else to="/login">Login</router-link>
+</h1>
   <div class="container">
         <div id="name_project">
         <div class="input">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" v-model="input.username" placeholder="Username" />
+            <input type="text" id="username" name="username" v-model="input.username" placeholder="Enter username" />
         </div>
         <div class="input">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" v-model="input.password" placeholder="Password" />
+            <input type="password" id="password" name="password" v-model="input.password" placeholder="Enter Password" />
         </div>
-        <button type="button" v-on:click="login()">Login</button>
+        <button type="button" @click="login()">Login</button>
         </div>
+        <button @click="show = !show">Show user name</button>
+        <h2 v-if="show">Hiden name</h2>
+        <h2 v-else><Transition>User name is: 'Abc'</Transition></h2>
+        <button @click="showpassword = !showpassword">Show password</button>
+        <Transition>
+        <p v-if="showpassword">P@ssword</p>
+        </Transition>
   </div>
   <footer class="addoninfo">
           <p>Please <a href="mailto: fake.help@StudeyPlan.com">Contact Service</a> if you have any inquiry.</p>
@@ -26,8 +37,11 @@
           return {
               input: {
                   username: "",
-                  password: ""
-              }
+                  password: "",
+                  
+              },
+              show: true,
+              showpassword: false,
           }
       },
       methods: {
@@ -76,5 +90,13 @@
   margin-top: 6px;
   height: 38px !important;
 }
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>
