@@ -1,8 +1,6 @@
 <template>
     <div class="about">
       <body class="container">
-        <div id="app">
-            <div class="main">
                 <div class="dateCheck">
                     <input type="checkbox" id ="Monday" value = "Monday" v-model="checkedDates"/>
                     <label for="Monday">Monday</label>
@@ -65,8 +63,7 @@
                 <input v-model="message" placeholder="edit me" />
                 </div>
                 <button class="button" v-on:click="now()">Submit</button>
-            </div>
-        </div>
+                <p>Check: {{ Finished }}</p>
       </body>
       <footer class="addoninfo">
           <p>Please <a href="mailto: fake.help@StudeyPlan.com">Contact Service</a> if you have any inquiry.</p>
@@ -80,20 +77,18 @@
       name: 'app',
       data() {
           return {
-              input: {
                 checked:false,
                 checkedDates:[],
                 planName:'My Plan',
                 profileName:'My Name',
                 Finished:'Not finished',
-                message:'Not finished',
-              }
+                message:'',
           }
       },
       methods: {
         now() {
             if (this.checkedDates.length>6){
-                this.$router.replace({ Finished: "Finished check" });
+                this.Finished = "Finished check";
             }
         }
       }
